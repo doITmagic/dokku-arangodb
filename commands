@@ -49,7 +49,7 @@ case "$1" in
     VOLUME="$HOST_DIR:/var/lib/arangodb"
 
     # Launch container
-    docker run -p 8529:8529  -e ARANGO_ROOT_PASSWORD=$ARANGO_ROOT_PASSWORD arangodb/arangodb $CONTAINER_NAME
+    docker run -d  -name $CONTAINER_NAME  -p 8529:8529  -e ARANGO_ROOT_PASSWORD=$ARANGO_ROOT_PASSWORD arangodb/arangodb 
 
 
     # Link to a potential existing app
