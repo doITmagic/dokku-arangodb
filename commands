@@ -30,7 +30,7 @@ fi
 case "$1" in
   arangodb:create)
     # Check if ArangoDB image is built
-    IMAGE=$(docker images | grep "arangodb" | awk '{print $3}')
+    IMAGE=$(docker images | grep "arangodb" | awk '{print $1}')
     if [[ -z $IMAGE ]]; then
         echo "ArangoDB image not found... Did you run 'dokku plugins-install' ?"
         exit 1
