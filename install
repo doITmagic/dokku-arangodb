@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Pull docker image
+#CWD=$(cd $(dirname $0); pwd)
+docker pull arangodb/arangodb:3.7.2.1
